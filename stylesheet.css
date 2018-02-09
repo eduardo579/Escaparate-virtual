@@ -1,0 +1,641 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    font-family: sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4.6fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr;
+}
+
+main > * {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+td {
+    border-bottom: 1px solid gray;
+    width: 270px;
+    height: 40px;
+    text-align: left;
+}
+
+#imagenPortada{
+    position: relative;
+    bottom:70px;
+}
+
+#audioPortada{
+    position: relative;
+    bottom:8px;
+}
+
+#textoProd{
+    position: relative;
+    bottom: 200px;
+    left: 470px;
+}
+
+#textoProd2 {
+    position: relative;
+    bottom: 160px;
+    left: 480px;
+}
+
+.cabecera {
+    text-align: right;
+    background-color: white; 
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+.central {
+    margin-right: 50px;
+    grid-column: 2 / 3;
+    grid-row: 3;
+}
+
+.pie {
+    grid-column: 1 / 4;
+    grid-row: 4;
+    text-align: center;
+    margin-top: 30px;
+}
+/*
+.navigation {
+    width: 300px;
+    height: 550px;
+    grid-column: 1;
+    grid-row: 2 / 4;
+}
+*/
+.lateralDer{
+    width: 300px;
+    height: 650px;
+    grid-column: 3;
+    grid-row: 2 / 4;
+    margin-right: 10px;
+}
+
+/* reset our lists to remove bullet points and padding */
+.mainmenu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* make ALL links (main and submenu) have padding and background color */
+.mainmenu a {
+    display: block;
+    background-color: #CCC;
+    text-decoration: none;
+    height: 90px;
+    width: 280px;
+    padding: 10px;
+    color: #000;
+}
+
+/* add hover behaviour */
+.mainmenu a:hover {
+    background-color: #C5C5C5;
+}
+
+.mainmenu li:hover .submenu {
+    display: block;
+    max-height: 500px;
+    max-width: 800px;
+}
+
+.submenu a {
+    background-color: #999;
+}
+
+/* hover behaviour for links inside .submenu */
+.submenu a:hover {
+    background-color: #666;
+}
+
+.submenu {
+    overflow: hidden;
+    max-height: 0;
+    -webkit-transition: all 0.5s ease-out;
+}
+
+.debajoCabec{
+    grid-column: 1 / 3;
+    grid-row: 2;
+    list-style-type: none;
+    margin-left: 15px;
+    margin-right: 50px;
+    padding: 0;
+    overflow: hidden;
+    align-content: space-between;  
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 12px 43.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 25px 0px;
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/*Botones de compra*/
+/*Boton 1*/
+
+.botonCompra1 {
+    border: none;
+    color: white;
+    padding: 12px 6.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 512px;
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.botonCompraExt {
+    background-color: black; 
+    color: white; 
+    border: 2px solid #008CBA;
+}
+
+.botonCompraExt:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+/*Boton 2*/
+
+.botonCompra2 {
+    border: none;
+    color: white;
+    padding: 12px 31.5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 0px;
+    -webkit-transition-duration: 0.8s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+
+.botonCompraExt2 {
+    background-color: black; 
+    color: white; 
+    border: 2px solid #008CBA;
+}
+
+.botonCompraExt2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+
+
+/*Botón de titulo de la página*/
+
+.btn {
+  position: relative;
+  display: inline-block;
+
+  margin: 30px 316px;
+  padding: 0;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: #000000;
+  color: #FFFFFF;
+  
+  transition: background-color .3s;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #27ae60;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+  background-color: #ecf0f1;
+  color: #34495e;
+  font-family: Trebuchet, Arial, sans-serif;
+  text-align: center;
+}
+
+h2 {
+  font-weight: normal;
+}
+
+
+h1 {
+  font-size: 26px;
+  background: #00bcd4;
+  color: white;
+  padding: 0px 0 60px;
+  margin-bottom: 50px;
+}
+
+label,
+p,
+a,
+h1,
+div {
+  font-family: Roboto, sans-serif;
+}
+
+.tab-wrap {
+  width: 100%;  
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: -106px;
+}
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: -1;
+}
+input[type="radio"][name="tabs"]:checked + .tab-label-content label {
+  color: white;
+}
+input[type="radio"][name="tabs"]:checked + .tab-label-content .tab-content {
+  display: block;
+}
+input[type="radio"][name="tabs"]:nth-of-type(1):checked ~ .slide {
+  left: calc((150% / 4) * 0);
+}
+input[type="radio"][name="tabs"]:nth-of-type(2):checked ~ .slide {
+  left: calc((150% / 4) * 1);
+}
+input[type="radio"][name="tabs"]:nth-of-type(3):checked ~ .slide {
+  left: calc((150% / 4) * 2);
+}
+input[type="radio"][name="tabs"]:nth-of-type(4):checked ~ .slide {
+  left: calc((150% / 4) * 3);
+}
+input[type="radio"][name="tabs"]:first-of-type:checked ~ .slide {
+  left: 0;
+}
+
+label {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #00bcd4;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  height: 56px;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+  width: 50%;
+}
+
+.slide {
+  background: #ffeb3b;
+  width: calc(100% / 4);
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 4px);
+  -webkit-transition: left 0.3s ease-out;
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  width: 50%;
+}
+.tab-label-content .tab-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  line-height: 130%;
+  display: none;
+  margin-top: 61px;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 10%;
+  }
+
+  .tab-wrap {
+    width: 80%;
+    margin-left: 10%;
+    top: -106px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .follow {
+    margin: 400px auto 0;
+  }
+}
+
+
+* { box-sizing:border-box; }
+
+
+#namanyay-search-btn {
+background:#0099ff;
+color:white;
+font: 'trebuchet ms', trebuchet;
+padding:8px 8px;
+border-radius:0 5px 5px 0;
+-moz-border-radius:0 5px 5px 0;
+-webkit-border-radius:0 5px 5px 0;
+-o-border-radius:0 5px 5px 0;
+border:0 none;
+font-weight:bold;
+}
+ 
+#namanyay-search-box {
+background: #eee;
+padding:8px;
+ border-radius:5px 0 0 5px;
+-moz-border-radius:5px 0 0 5px;
+-webkit-border-radius:5px 0 0 5px;
+-o-border-radius:5px 0 0 5px;
+border:0 none;
+width:160px;
+ }
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+
+
+.catogery-list {
+      grid-column: 1;
+    grid-row: 2 / 4;
+  display: block;
+  float: left;
+  list-style:none;
+  width: 70%;
+  height: 400px;
+  color: #000000;
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin: 15px;
+  margin-top: 80px;
+}
+
+.catogery-list li {
+  display: block;
+  color: #000000;
+  padding: 20px 10px;
+  font: 18px sans-serif;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.catogery-list li:hover {
+  background: #fff;
+  color: #000000;
+  border-left: 3px solid #ACDEB2
+}
+li.active {
+  background: #fff;
+  color: #23192D;
+  border-left: 3px solid #ACDEB2  
+}
+
+.products {
+  width: 65%;
+  min-height: 100vh;
+  height: auto;
+  float: left;
+  background: #23192D;
+  margin: 15px 10px;
+  padding: 10px;
+}
+.products > div {
+  display: inline-block;
+  width: 30.3333%;
+  height: 100px;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 5px;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    }
+
+    .cabecera {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .debajoCabec{
+        background-size: 1080px 113px;
+        grid-column: 3;
+        grid-row: 2 / 8;
+    }
+
+    .navigation {
+        width: 200px;
+        height: 650px;
+        grid-column: 1;
+        grid-row: 2 / 8;
+        align-content: space-between;
+    }
+
+    /* reset our lists to remove bullet points and padding */
+    .mainmenu, .submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* make ALL links (main and submenu) have padding and background color */
+    .mainmenu a {
+        display: block;
+        background-color: #CCC;
+        text-decoration: none;
+        height: 90px;
+        width: 160px;
+        padding: 10px;
+        color: #000;
+    }
+
+    /* add hover behaviour */
+    .mainmenu a:hover {
+        background-color: #C5C5C5;
+    }
+
+    .mainmenu li:hover .submenu {
+        display: block;
+        max-height: 500px;
+        max-width: 800px;
+    }
+
+    .submenu a {
+        background-color: #999;
+    }
+
+    /* hover behaviour for links inside .submenu */
+    .submenu a:hover {
+        background-color: #666;
+    }
+
+    .submenu {
+        overflow: hidden;
+        max-height: 0;
+        -webkit-transition: all 0.5s ease-out;
+    }
+
+    .central {
+        grid-column: 2 / 3;
+        grid-row: 2 / 8;
+    }
+
+    .pie {
+        grid-column: 1 / 3;
+        grid-row: 8;
+        text-align: center;
+    }
+
+}

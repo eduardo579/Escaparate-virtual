@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="validacionForm.js"></script>       <!--Se enlaza el archivo de validación js-->
+    <style>
+        .error {
+            border: solid 2px #FF0000;              /*Creará un cuadro si hay un error*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Regístrate:</h1>
+    <h4>Los campos con * son obligatorios</h4>
+    <form action="Inicio.html" method="post" id="miFormulario">     <!--Se dirigirá a la página una vez que el formulario sea válido-->
+        <table>
+            <tr>
+                <td>Nombre*: </td>
+                <td>
+                    <input type="text" name="nombre" id="nombre" maxlength="15" pattern="[/^[a-z áéíóúñüàè]+$/i]{2,15}]" title="Introduce entre 2 y 15 letras" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Apellidos*: </td>
+                <td>
+                    <input type="text" name="apellidos" id="apellidos" maxlength="20" pattern="[/^[a-z áéíóúñüàè]+$/i]{3,20}]" title="Introduce entre 3 y 20 letras" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>E-mail*: </td>
+                <td>
+                    <input type="mail" name="email" id="email" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Contraseña*: </td>
+                <td>
+                    <input type="password" name="contrasena" id="contrasena" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}" title="Escribe caracteres, una letra minúscula y mayúscula, número y símbolo" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Confirma tu contraseña*: </td>
+                <td>
+                    <input type="password" name="contrasenaConf" id="contrasenaConf" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,}" title="Escribe caracteres, una letra minúscula y mayúscula, número y símbolo" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>Sexo: <select name="sexo">
+                   <option value="1">Hombre</option> 
+                   <option value="2">Mujer</option> 
+                </select></td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento: </td>
+                <td>
+                    <input type="date" name="calendario" step="1" max="2018-12-31" value="1970-01-01">
+                </td>
+            </tr>
+            <tr>
+                <td>Dirección: </td>
+                <td>
+                    <input type="text" name="direccion" id="direccion" pattern="^[a-z]{2,}[\s][a-z]{4,}[\s][\d]{1,2}" title="Introduce tu dirección de domicilio" onkeydown="showTarjeta()" />      <!--Se asigna el evento para que verifique que sa ha escrito una dirección y mostrar el input de la tarjeta de crédito-->
+                </td>
+            </tr>
+            <tr>
+                <td>País: <select id="pais" onclick="showTarjeta()">    <!--Se asigna el evento para que verifique que sa ha elegido una opción y mostrar el input de la tarjeta de crédito-->
+                    <option value="0">Elige una opción...</option> 
+                    <option value="1">España</option> 
+                    <option value="2">Portugal</option> 
+                    <option value="3">Italia</option> 
+                    <option value="4">Francia</option> 
+                    <option value="5">Inglaterra</option> 
+                    <option value="6">Alemania</option> 
+                </select></td>
+            </tr>
+            <tr>    <!--En este TR se mostrará el input de la tarjeta de crédito siempre que cumpla las condiciones-->
+                <td id="nombreCampo"></td>
+                <td id="tarjetaTR">
+
+                </td>
+            </tr>
+            <tr>
+                <td>Deseo recibir novedades: </td>
+                <td>
+                    <input type="radio" name="1" value="1">Sí<br>
+                    <input type="radio" name="1" value="2">No 
+                </td>
+            </tr>
+            <tr>
+                <td>Deseo recibir una versión de la revista digital: </td>
+                <td>
+                    <input type="radio" name="2" value="1">Sí<br>
+                    <input type="radio" name="2" value="2">No
+                </td>
+            </tr>
+        </table>
+
+        <p id="mensajeError"></p> 
+        <p>
+            <input type="submit" value="Enviar" id="enviar" />
+            <input type="reset"  value="Borrar" id="borrar" />
+            <input type="submit" value="Reiniciar" id="Reiniciar" />
+        </p>
+    </form>
+
+</body>
+
+</html>

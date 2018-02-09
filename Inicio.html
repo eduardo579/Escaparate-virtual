@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="validacionForm.js"></script>       <!--Se enlaza el archivo de validación js-->
+</head>
+<body>
+<main>
+    <header class="cabecera">   <!--Zona donde se sitúan el logotipo de la marca y los botones de login / registro-->
+        <img class="btn" src="./imagenes sin comprimir/logo.jpg" width="200px" height="40" style="float: left;">
+        <form action="Principal.html">
+            <button class="button button2" style="margin-right: 60px;" onclick="borrarCookie()">Cerrar sesión</button>
+        </form>
+    	
+    </header>
+   
+    <aside class="debajoCabec"> <!--Barra de navegación-->
+<ul>
+ <li><a href="#home">&nbsp&nbsp Inicio &nbsp&nbsp&nbsp&nbsp /</a></li>
+  <li><a href="#news">  Noticias &nbsp&nbsp&nbsp&nbsp </a></li>
+</ul>
+    </aside>
+ 
+      <article class="central" style="text-align: left; display: inline-block; overflow: auto;">        <!--Zona central de la página, donde se muestra info-->
+
+      Últimas noticias:
+       <div style="display: flex; flex-wrap: wrap;">
+         <figure>
+           <span id="imagenPortada"> Revive la gran salida de Alonso en 2012 &nbsp-> &nbsp </span>
+          <video width="42%" controls>
+            <source src="./Videos/Alonso.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </figure>
+
+      </div>
+
+      <div>
+          <figure>
+            <span id="audioPortada">Declaraciones de pilotos en Abu Dhabi &nbsp&nbsp&nbsp-> &nbsp&nbsp&nbsp</span>
+             <audio controls>
+              <source src="Audio/abudhabi.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+            </audio> 
+          </figure>
+      </div>
+
+      <div>
+          <figure>
+                <span id="audioPortada">Team Radio de los pilotos en Abu Dhabi &nbsp-> &nbsp&nbsp&nbsp</span>
+                 <audio controls>
+                  <source src="Audio/TeamRadio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio> 
+              </figure>
+      </div>
+
+   
+    </article>
+	<ul class="catogery-list">             <!--Lista de las diferentes categorías-->
+  <li data-value="sports">Inicio</li>
+  <li data-value="clothes">Categorías</li>
+  <li data-value="acc">Merchandising</li>
+  <li data-value="kids" class="active">Noticias</li>
+</ul>
+
+    <aside class="lateralDer">             <!--Textfield y botón de búsqueda-->
+<div class="container">
+<form id="searchthis" action="/search" style="display:inline;" method="get">
+<input id="namanyay-search-box" name="q" size="10" type="text" placeholder="Buscar..."/>
+<input id="namanyay-search-btn" value="Ir" type="submit"/>
+</form>
+</div>
+
+<h1></h1>
+<div class="tab-wrap">                      <!--Menú dividido en tres zonas: cesta, social y mapa-->
+  
+    <input type="radio" name="tabs" id="tab1" checked>
+    <div class="tab-label-content" id="tab1-content">
+      <label for="tab1">Cesta</label>
+      <div class="tab-content">Aún no tienes artículos en tu cesta</div>
+    </div>
+     
+    <input type="radio" name="tabs" id="tab2">
+    <div class="tab-label-content" id="tab2-content">
+      <label for="tab2">Amigos</label>
+ <div class="tab-content">Entra o regístrate para ver qué compran tus amigos</div>
+    </div>
+    
+    <input type="radio" name="tabs" id="tab3">
+    <div class="tab-label-content" id="tab3-content">
+      <label for="tab3">Mapa</label>
+      <div class="tab-content"><img src="./Imagenes comprimidas/mapa.jpg" width="290" height="252"></div>
+    </div>
+    
+    <div class="slide"></div>
+  
+</div>
+
+<div style="margin-top: 173px">         <!--Banner de la página en formato gif-->
+  RGMotorsport -
+  Entra!
+  <img src="./imagenes sin comprimir/banner.gif" width="170px" height="90px" style="z-index: 0">
+</div>
+
+    </aside>
+
+    <footer class="pie">            <!--Pie de página-->
+      <ul>
+  <li><a href="#home" style="margin-left: 230px;">Condiciones de uso</a></li>
+  <li><a href="#news" style="margin-left: 80px;">Newsletter</a></li>
+  <li><a href="#contact" style="margin-left: 80px;">Contacto</a></li>
+  <li><a href="#about" style="margin-left: 80px;">Sobre RGMotorsport</a></li>
+</ul>
+    </footer>
+</main>
+</body>
+</html>
